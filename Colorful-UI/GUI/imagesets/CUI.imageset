@@ -4,6 +4,10 @@ ImageSetClass {
  Textures {
   ImageSetTextureClass {
    mpix 1
+   path "{4E1A3BC523539FB3}Colorful-UI/GUI/imagesets/BSRP-Imageset.edds"
+  }
+  ImageSetTextureClass {
+   mpix 1
    path "{7CD806F5385DC838}Colorful-UI/GUI/imagesets/CUI-Imageset.edds"
   }
  }
@@ -11,7 +15,7 @@ ImageSetClass {
   ImageSetDefClass Logo {
    Name "Logo"
    Pos 11 15
-   Size 438 261
+   Size 558 269
    Flags 0
   }
  }

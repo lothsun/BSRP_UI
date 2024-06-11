@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{4E1A3BC523539FB3}Colorful-UI/GUI/imagesets/BSRP-Imageset.edds"
+ Author "dayz-box"
+ ChangeDate -354701110
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "BSRP-Imageset.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}
