@@ -7,6 +7,8 @@ modded class MainMenu extends UIScriptedMenu
 	private Widget m_Reddit;
 	private Widget m_Facebook;
 	private Widget m_Meta;
+	private Widget m_Instagram;
+	private Widget m_Donate;
 
 	// Social Icons
 	private Widget m_DiscordImg;
@@ -15,6 +17,8 @@ modded class MainMenu extends UIScriptedMenu
 	private Widget m_RedditImg;
 	private Widget m_FacebookImg;
 	private Widget m_MetaImg;
+	private Widget m_InstagramImg;
+	private Widget m_DonateImg
 	
 	// Top Nav Buttons
 	private Widget m_ExitBtn;
@@ -63,6 +67,9 @@ modded class MainMenu extends UIScriptedMenu
 		m_FacebookImg 				= layoutRoot.FindAnyWidget( "FacebookBtn_img" );
 		m_Meta 						= layoutRoot.FindAnyWidget( "MetaBtn" );
 		m_MetaImg 					= layoutRoot.FindAnyWidget( "MetaBtn_img" );
+		m_Instagram					= layoutRoot.FindAnyWidget( "InstagramBtn");
+		m_InstagramImg				= layoutRoot.FindAnyWidget( "InstagramBtn_img");
+		m_Donate					= layoutRoot.FindAnyWidget( "DonateBtn");
 		
 		// Shaders
 		m_TopShader 			    = layoutRoot.FindAnyWidget( "TopShader" );
@@ -134,6 +141,7 @@ modded class MainMenu extends UIScriptedMenu
 		m_RedditImg.SetColor(UIColor.reddit());
 		m_FacebookImg.SetColor(UIColor.meta());
 		m_MetaImg.SetColor(UIColor.meta());
+		m_InstagramImg.SetColor(UIColor.instagram());
 
 		// This progress bar is just used as trim. 
 		m_ProgressLoading = ProgressBarWidget.Cast( layoutRoot.FindAnyWidget("LoadingBar") );
@@ -189,6 +197,16 @@ modded class MainMenu extends UIScriptedMenu
 		{
 			GetGame().OpenURL(MenuURLS.urlPriorityQ);
 			return false;
+		}
+		else if (button == MouseState.LEFT && w == m_Instagram)
+		{
+			GetGame().OpenURL(MenuURLS.urlInstagram);
+			return true;
+		}
+		else if (button == MouseState.LEFT && w == m_Donate)
+		{
+			GetGame().OpenURL(MenuURLS.urlDonate);
+			return true;
 		}
 		else if ( w == m_CharacterBtn )
 		{
@@ -302,6 +320,20 @@ modded class MainMenu extends UIScriptedMenu
 		ImagenSetColor(w, color_img);	
 	}
 
+	void InstagramHighlight( Widget w )
+	{
+		if( !w )
+			return;	
+			
+		int color_pnl = UIColor.Transparent();
+		int color_lbl = UIColor.instagram();
+		int color_img = UIColor.instagram();	
+
+		ButtonSetColor(w, color_pnl);
+		ButtonSetTextColor(w, color_lbl);
+		ImagenSetColor(w, color_img);	
+	}
+
 	void MetaHighlight( Widget w )
 	{
 		if( !w )
@@ -357,6 +389,11 @@ modded class MainMenu extends UIScriptedMenu
 		if( w == m_Reddit )
 		{
 			RedditHighlight( w );
+			return true;
+		}
+		if( w == m_Instagram )
+		{
+			InstagramHighlight( w );
 			return true;
 		}
 		if( IsFocusable( w ) )

@@ -1,0 +1,16 @@
+MetaFileClass {
+ Name "{129F19EB951F7D5F}Colorful-UI/GUI/textures/loading_screens/BSRP/BSRPMainMenu.edds"
+ Author "dayz-box"
+ ChangeDate 889532621
+ Configurations {
+  PNGResourceClass PC {
+   SourceFile "BSRPMainMenu.png"
+  }
+  PNGResourceClass XBOX_ONE : PC {
+  }
+  PNGResourceClass PS4 : PC {
+  }
+  PNGResourceClass LINUX : PC {
+  }
+ }
+}

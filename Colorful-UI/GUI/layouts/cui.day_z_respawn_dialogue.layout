@@ -318,14 +318,14 @@ WindowWidgetClass WindowWidget {
     ImageWidgetClass Logo {
      visible 1
      inheritalpha 1
-     size 438 261
+     size 611 270
      hexactpos 1
      vexactpos 1
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 "set:cui image:Logo"
-     imageTexture "{7CD806F5385DC838}Colorful-UI/GUI/imagesets/CUI-Imageset.edds"
+     imageTexture "{4E1A3BC523539FB3}Colorful-UI/GUI/imagesets/BSRP-Imageset.edds"
      mode blend
      "src alpha" 1
      "clamp mode" clamp
@@ -796,7 +796,7 @@ WindowWidgetClass WindowWidget {
           }
          }
         }
-        ButtonWidgetClass QueueBtn {
+        ButtonWidgetClass DonateBtn {
          color 0 0 0 0
          position 0 0
          size 293 38
@@ -813,7 +813,7 @@ WindowWidgetClass WindowWidget {
          "next up" "choose_server"
          "next down" "play_video"
          {
-          PanelWidgetClass QueueBtn_panel {
+          PanelWidgetClass DonateBtn_panel {
            ignorepointer 1
            color 0 0 0 0
            size 1 1
@@ -825,7 +825,7 @@ WindowWidgetClass WindowWidget {
            vexactsize 0
            style DayZDefaultPanel
            {
-            TextWidgetClass QueueBtn_label {
+            TextWidgetClass DonateBtn_label {
              clipchildren 0
              ignorepointer 1
              size 1 1
@@ -835,7 +835,7 @@ WindowWidgetClass WindowWidget {
              vexactpos 0
              hexactsize 0
              vexactsize 0
-             text "Priority Queue"
+             text "Donate"
              font "Colorful-UI/gui/fonts/GB-Regular.fnt"
              "text sharpness" 1.5
              "exact text" 1
@@ -1166,7 +1166,7 @@ WindowWidgetClass WindowWidget {
           }
          }
         }
-        ButtonWidgetClass RedditBtn {
+        ButtonWidgetClass instagramBtn {
          visible 1
          color 0 0 0 0
          size 293 38
@@ -1183,7 +1183,7 @@ WindowWidgetClass WindowWidget {
          "next up" "choose_server"
          "next down" "play_video"
          {
-          PanelWidgetClass RedditBtn_panel {
+          PanelWidgetClass InstagramBtn_panel {
            ignorepointer 1
            color 0 0 0 0
            size 293 40
@@ -1195,7 +1195,7 @@ WindowWidgetClass WindowWidget {
            vexactsize 1
            style DayZDefaultPanel
            {
-            ImageWidgetClass RedditBtn_img {
+            ImageWidgetClass InstagramBtn_img {
              clipchildren 0
              ignorepointer 1
              position 0 0
@@ -1206,14 +1206,14 @@ WindowWidgetClass WindowWidget {
              vexactpos 1
              hexactsize 1
              vexactsize 1
-             image0 "set:cui image:Reddit"
+             image0 "set:cui image:Instagram"
              mode blend
              "src alpha" 1
              "clamp mode" clamp
              "stretch mode" stretch_w_h
              filter 1
             }
-            TextWidgetClass RedditBtn_label {
+            TextWidgetClass InstagramBtn_label {
              clipchildren 0
              ignorepointer 1
              position 50 0
@@ -1224,7 +1224,7 @@ WindowWidgetClass WindowWidget {
              vexactpos 1
              hexactsize 0
              vexactsize 0
-             text "Reddit"
+             text "Instagram"
              font "Colorful-UI/gui/fonts/GB-Regular.fnt"
              "exact text" 1
              "exact text size" 30
@@ -1238,7 +1238,7 @@ WindowWidgetClass WindowWidget {
          }
         }
         ButtonWidgetClass FacebookBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 38
          halign right_ref

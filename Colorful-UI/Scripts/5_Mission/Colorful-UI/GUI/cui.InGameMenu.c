@@ -7,6 +7,9 @@ modded class InGameMenu extends UIScriptedMenu
 	private Widget m_Youtube;
 	private Widget m_Reddit;
 	private Widget m_Facebook;
+	private Widget m_Instagram;
+	private Widget m_Donate;
+	private Widget m_Website;
 	
 	private Widget m_DiscordImg;
 	private Widget m_TwitterImg;
@@ -14,6 +17,8 @@ modded class InGameMenu extends UIScriptedMenu
 	private Widget m_RedditImg;
 	private Widget m_FacebookImg;
 	private Widget m_MetaImg;
+	private Widget m_InstagramImg;
+	private Widget m_DonateImg;
 	private Widget m_MenuDivider;
 	
 	private Widget m_TopShader;
@@ -58,6 +63,10 @@ modded class InGameMenu extends UIScriptedMenu
 		m_MetaImg 					= layoutRoot.FindAnyWidget( "MetaBtn_img" );
 		m_TopShader 			    = layoutRoot.FindAnyWidget( "TopShader" );
 		m_BottomShader 			    = layoutRoot.FindAnyWidget( "BottomShader" );
+		m_Instagram					= layoutRoot.FindAnyWidget( "InstagramBtn");
+		m_InstagramImg				= layoutRoot.FindAnyWidget( "InstagramBtn_img");
+		m_Donate					= layoutRoot.FindAnyWidget( "DonateBtn");
+		m_Website					= layoutRoot.FindAnyWidget( "WebsiteBtn" );
 		
 		// Social Icons
 		m_DiscordImg.SetColor(UIColor.discord());
@@ -66,6 +75,7 @@ modded class InGameMenu extends UIScriptedMenu
 		m_RedditImg.SetColor(UIColor.reddit());
 		m_FacebookImg.SetColor(UIColor.meta());
 		m_MetaImg.SetColor(UIColor.meta());
+		m_InstagramImg.SetColor(UIColor.instagram());
 
    		m_MenuDivider.SetColor(colorScheme.Separator());
 		m_TopShader.SetColor(colorScheme.TopShader());
@@ -166,6 +176,21 @@ modded class InGameMenu extends UIScriptedMenu
 			GetGame().OpenURL(MenuURLS.urlFacebook);
 			return false;
 		}
+		else if (button == MouseState.LEFT && w == m_Instagram)
+		{
+			GetGame().OpenURL(MenuURLS.urlInstagram);
+			return true;
+		}
+		else if (button == MouseState.LEFT && w == m_Donate)
+		{
+			GetGame().OpenURL(MenuURLS.urlDonate);
+			return true;
+		}
+		else if (button == MouseState.LEFT && w == m_Website)
+		{
+			GetGame().OpenURL(MenuURLS.urlWebsite);
+			return false;
+		}
 
 		return false;
 	}
@@ -243,6 +268,18 @@ modded class InGameMenu extends UIScriptedMenu
 		ButtonSetTextColor(w, color_lbl);
 	}
 
+	void InstagramHighlight( Widget w )
+	{
+		if( !w )
+			return;	
+			
+		int color_pnl = UIColor.Transparent();
+		int color_lbl = UIColor.instagram();	
+
+		ButtonSetColor(w, color_pnl);
+		ButtonSetTextColor(w, color_lbl);	
+	}
+
 	protected void MetaHighlight( Widget w )
 	{
 		if( !w )
@@ -286,6 +323,12 @@ modded class InGameMenu extends UIScriptedMenu
 		if( w == m_Reddit )
 		{
 			RedditHighlight( w );
+			return true;
+		}
+
+		if( w == m_Instagram )
+		{
+			InstagramHighlight( w );
 			return true;
 		}
 

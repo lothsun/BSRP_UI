@@ -9,9 +9,14 @@ modded class LogoutMenu extends UIScriptedMenu
 	private Widget m_Facebook;
 	private Widget m_Separator
 	private	Widget m_shader
+	private Widget m_Instagram;
+	private Widget m_Donate;
+	private Widget m_Website;
 
 	private	Widget m_timerText
 
+	private Widget m_InstagramImg;
+	private Widget m_DonateImg;
 	private Widget m_DiscordImg;
 	private Widget m_TwitterImg;
 	private Widget m_YoutubeImg;
@@ -44,6 +49,10 @@ modded class LogoutMenu extends UIScriptedMenu
 		m_BottomShader 			    = layoutRoot.FindAnyWidget( "BottomShader" );
 		m_MenuDivider				= layoutRoot.FindAnyWidget( "MenuDivider" );
 		m_timerText 				= layoutRoot.FindAnyWidget( "txtLogoutTime" );
+		m_Instagram					= layoutRoot.FindAnyWidget( "InstagramBtn");
+		m_InstagramImg				= layoutRoot.FindAnyWidget( "InstagramBtn_img");
+		m_Donate					= layoutRoot.FindAnyWidget( "DonateBtn");
+		m_Website					= layoutRoot.FindAnyWidget( "WebsiteBtn" );
 
 		m_restartbtn		= ButtonWidget.Cast(layoutRoot.FindAnyWidget("restartbtn"));
 		m_optionsbtn        = ButtonWidget.Cast(layoutRoot.FindAnyWidget("optionsbtn"));
@@ -73,6 +82,7 @@ modded class LogoutMenu extends UIScriptedMenu
 		m_RedditImg.SetColor(UIColor.reddit());
 		m_FacebookImg.SetColor(UIColor.meta());
 		m_MetaImg.SetColor(UIColor.meta());
+		m_InstagramImg.SetColor(UIColor.instagram());
 
 		m_Separator = layoutRoot.FindAnyWidget( "actionItems_separator" );
 
@@ -130,6 +140,11 @@ modded class LogoutMenu extends UIScriptedMenu
 			GetGame().OpenURL(MenuURLS.urlFacebook);
 			return false;
 		}
+		else if (button == MouseState.LEFT && w == m_Instagram)
+		{
+			GetGame().OpenURL(MenuURLS.urlInstagram);
+			return true;
+		}
 		else if (w == m_restartbtn)
 		{
 			GetGame().GetMission().AbortMission();
@@ -175,6 +190,12 @@ modded class LogoutMenu extends UIScriptedMenu
 		if( w == m_Reddit )
 		{
 			RedditHighlight( w );
+			return true;
+		}
+
+		if( w == m_Instagram )
+		{
+			InstagramHighlight( w );
 			return true;
 		}
 
@@ -238,6 +259,18 @@ modded class LogoutMenu extends UIScriptedMenu
 			
 		int color_pnl = UIColor.Transparent();
 		int color_lbl = UIColor.reddit();
+		ButtonSetColor(w, color_pnl);
+		ButtonSetTextColor(w, color_lbl);
+	}
+
+	void InstagramHighlight( Widget w )
+	{
+		if( !w )
+			return;	
+			
+		int color_pnl = UIColor.Transparent();
+		int color_lbl = UIColor.instagram();	
+
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);
 	}

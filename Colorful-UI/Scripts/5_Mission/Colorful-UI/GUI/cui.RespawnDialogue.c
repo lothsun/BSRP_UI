@@ -8,6 +8,8 @@ modded class RespawnDialogue extends UIScriptedMenu
 	private Widget m_Facebook;
 	private Widget m_Separator
 	private	Widget m_shader
+	private Widget m_Instagram;
+	private Widget m_Donate;
 
 	private Widget m_DiscordImg;
 	private Widget m_TwitterImg;
@@ -15,6 +17,9 @@ modded class RespawnDialogue extends UIScriptedMenu
 	private Widget m_RedditImg;
 	private Widget m_FacebookImg;
 	private Widget m_MetaImg;
+	private Widget m_InstagramImg;
+	private Widget m_DonateImg;
+	private Widget m_Website;
 
 	private Widget m_TopShader;
 	private Widget m_BottomShader;
@@ -49,6 +54,10 @@ modded class RespawnDialogue extends UIScriptedMenu
 		m_TopShader 			    = layoutRoot.FindAnyWidget( "TopShader" );
 		m_BottomShader 			    = layoutRoot.FindAnyWidget( "BottomShader" );
 		m_MenuDivider				= layoutRoot.FindAnyWidget( "MenuDivider" );
+		m_Instagram					= layoutRoot.FindAnyWidget( "InstagramBtn");
+		m_InstagramImg				= layoutRoot.FindAnyWidget( "InstagramBtn_img");
+		m_Donate					= layoutRoot.FindAnyWidget( "DonateBtn");
+		m_Website					= layoutRoot.FindAnyWidget( "WebsiteBtn" );
 
 		m_TopShader.SetColor(colorScheme.TopShader());
 		m_BottomShader.SetColor(colorScheme.BottomShader());
@@ -60,6 +69,7 @@ modded class RespawnDialogue extends UIScriptedMenu
 		m_RedditImg.SetColor(UIColor.reddit());
 		m_FacebookImg.SetColor(UIColor.meta());
 		m_MetaImg.SetColor(UIColor.meta());
+		m_InstagramImg.SetColor(UIColor.instagram());
 
 		m_GameOverScreen = Widget.Cast(layoutRoot.FindAnyWidget("GameOverScreen"));
 		m_GameOverScreen.SetAlpha(0);
@@ -129,6 +139,21 @@ modded class RespawnDialogue extends UIScriptedMenu
 			GetGame().OpenURL(MenuURLS.urlFacebook);
 			return false;
 		}
+		else if (button == MouseState.LEFT && w == m_Instagram)
+		{
+			GetGame().OpenURL(MenuURLS.urlInstagram);
+			return true;
+		}
+		else if (button == MouseState.LEFT && w == m_Donate)
+		{
+			GetGame().OpenURL(MenuURLS.urlDonate);
+			return true;
+		}
+		else if (button == MouseState.LEFT && w == m_Website)
+		{
+			GetGame().OpenURL(MenuURLS.urlWebsite);
+			return false;
+		}
 
 		return false;
 	}
@@ -162,6 +187,12 @@ modded class RespawnDialogue extends UIScriptedMenu
 		if( w == m_Reddit )
 		{
 			RedditHighlight( w );
+			return true;
+		}
+
+		if( w == m_Instagram )
+		{
+			InstagramHighlight( w );
 			return true;
 		}
 
@@ -226,6 +257,17 @@ modded class RespawnDialogue extends UIScriptedMenu
 		int color_lbl = UIColor.youtube();
 		ButtonSetColor(w, color_pnl);
 		ButtonSetTextColor(w, color_lbl);
+	}
+	void InstagramHighlight( Widget w )
+	{
+		if( !w )
+			return;	
+			
+		int color_pnl = UIColor.Transparent();
+		int color_lbl = UIColor.instagram();	
+
+		ButtonSetColor(w, color_pnl);
+		ButtonSetTextColor(w, color_lbl);	
 	}
 
 	protected void RedditHighlight( Widget w )

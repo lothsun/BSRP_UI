@@ -1,0 +1,20 @@
+ImageSetClass {
+ Name "BSRP"
+ RefSize 925 925
+ Textures {
+  ImageSetTextureClass {
+   mpix 1
+   path "{7CD806F5385DC838}Colorful-UI/GUI/imagesets/CUI-Imageset.edds"
+  }
+ }
+ Images {
+  ImageSetDefClass Logo {
+   Name "Logo"
+   Pos 12 10
+   Size 555 279
+   Flags 0
+  }
+ }
+ Groups {
+ }
+}

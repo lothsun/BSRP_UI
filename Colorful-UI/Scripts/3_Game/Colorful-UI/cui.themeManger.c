@@ -28,6 +28,7 @@ class UIColor
 	static int youtube() 			  { return ARGB(255, 255, 0, 0); };
 	static int reddit()               { return ARGB(255, 255, 69, 0); };
 	static int meta()                 { return ARGB(255, 24, 119, 242); };
+	static int instagram()  		  { return ARGB(255, 221, 42, 123); };
 	
 	// Custom Colors (Use to add your own branding colors)
 	static int CUI2Teal()             { return ARGB(255, 102, 153, 153); };

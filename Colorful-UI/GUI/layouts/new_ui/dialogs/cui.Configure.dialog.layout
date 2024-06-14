@@ -26,7 +26,7 @@ FrameWidgetClass DialogRoot {
    scaled 1
    fixaspect outside
    image0 ""
-   imageTexture "{105076873F0677B3}Colorful-UI/GUI/textures/loading_screens/CUI2-BG4.edds"
+   imageTexture "{129F19EB951F7D5F}Colorful-UI/GUI/textures/loading_screens/BSRP/BSRPMainMenu.edds"
    mode opaque
    "src alpha" 1
    "clamp mode" clamp
@@ -51,6 +51,7 @@ FrameWidgetClass DialogRoot {
      visible 1
      clipchildren 0
      ignorepointer 1
+     color 0.4314 0.4314 0.4314 0.3922
      size 1 1
      halign center_ref
      hexactpos 1
@@ -67,6 +68,7 @@ FrameWidgetClass DialogRoot {
      visible 1
      clipchildren 0
      ignorepointer 1
+     color 0.4314 0.4314 0.4314 0.3922
      position 0 0
      size 1.01 1
      halign center_ref

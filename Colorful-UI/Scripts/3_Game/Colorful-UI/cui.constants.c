@@ -38,14 +38,17 @@ class GameOverScreen
 // SOCIALS & LINKS ---------------------------------------------------------------
 // Set your links Here
 class MenuURLS {
-	static string urlDiscord   = "#";
+	static string urlDiscord   = "https://discord.gg/SSqG444";
 	static string urlFacebook  = "#";
-	static string urlTwitter   = "#";
+	static string urlTwitter   = "https://x.com/survivors_rp";
 	static string urlReddit    = "#";
-	static string urlYoutube   = "#";
-	static string urlWebsite   = "#"; 
+	static string urlYoutube   = "https://www.youtube.com/@BritishRoleplayCommunity";
+	static string urlWebsite   = "https://bsrp.me"; 
 	static string urlPriorityQ = "#";
 	static string urlCustom    = "#";
+	static string urlInstagram = "https://www.instagram.com/britishsurvivors";
+	static string urlDonate    = "https://paypal.me/BSRPNew";
+
 }
 
 // DIALOGS ------------------------------------------------------------------------

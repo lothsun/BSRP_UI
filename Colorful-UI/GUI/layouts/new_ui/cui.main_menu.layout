@@ -24,7 +24,7 @@ FrameWidgetClass main_menu_root {
    scaled 1
    fixaspect outside
    image0 ""
-   imageTexture "{105076873F0677B3}Colorful-UI/GUI/textures/loading_screens/CUI2-BG4.edds"
+   imageTexture "{129F19EB951F7D5F}Colorful-UI/GUI/textures/loading_screens/BSRP/BSRPMainMenu.edds"
    mode opaque
    "src alpha" 1
    "clamp mode" clamp
@@ -47,9 +47,10 @@ FrameWidgetClass main_menu_root {
    vexactsize 0
    {
     ImageWidgetClass TopShader {
-     visible 1
+     visible 0
      clipchildren 0
      ignorepointer 1
+     color 0.4314 0.4314 0.4314 0.3922
      size 1 1
      halign center_ref
      hexactpos 1
@@ -63,9 +64,10 @@ FrameWidgetClass main_menu_root {
      "stretch mode" stretch_w_h
     }
     ImageWidgetClass BottomShader {
-     visible 1
+     visible 0
      clipchildren 0
      ignorepointer 1
+     color 0.4314 0.4314 0.4314 0.3922
      position 0 0
      size 1.01 1
      halign center_ref
@@ -115,14 +117,14 @@ FrameWidgetClass main_menu_root {
      visible 1
      inheritalpha 1
      position 0 0
-     size 438 261
+     size 611 270
      hexactpos 1
      vexactpos 1
      hexactsize 1
      vexactsize 1
      fixaspect outside
      image0 "set:cui image:Logo"
-     imageTexture "{7CD806F5385DC838}Colorful-UI/GUI/imagesets/CUI-Imageset.edds"
+     imageTexture "{4E1A3BC523539FB3}Colorful-UI/GUI/imagesets/BSRP-Imageset.edds"
      mode blend
      "src alpha" 1
      "clamp mode" clamp
@@ -185,6 +187,7 @@ FrameWidgetClass main_menu_root {
            hexactsize 1
            vexactsize 1
            image0 "set:cui image:Book"
+           imageTexture "{4E1A3BC523539FB3}Colorful-UI/GUI/imagesets/BSRP-Imageset.edds"
            mode blend
            "src alpha" 1
            "clamp mode" clamp
@@ -254,6 +257,7 @@ FrameWidgetClass main_menu_root {
            hexactsize 1
            vexactsize 1
            image0 "set:cui image:QuestionStarOutline"
+           imageTexture "{4E1A3BC523539FB3}Colorful-UI/GUI/imagesets/BSRP-Imageset.edds"
            mode blend
            "src alpha" 1
            "clamp mode" clamp
@@ -326,6 +330,7 @@ FrameWidgetClass main_menu_root {
            hexactsize 1
            vexactsize 1
            image0 "set:cui image:SettingSliders"
+           imageTexture "{4E1A3BC523539FB3}Colorful-UI/GUI/imagesets/BSRP-Imageset.edds"
            mode blend
            "src alpha" 1
            "clamp mode" clamp
@@ -397,6 +402,7 @@ FrameWidgetClass main_menu_root {
            hexactsize 1
            vexactsize 1
            image0 "set:cui image:Exit"
+           imageTexture "{4E1A3BC523539FB3}Colorful-UI/GUI/imagesets/BSRP-Imageset.edds"
            mode blend
            "src alpha" 1
            "clamp mode" clamp
@@ -778,7 +784,7 @@ FrameWidgetClass main_menu_root {
           }
          }
         }
-        ButtonWidgetClass QueueBtn {
+        ButtonWidgetClass DonateBtn {
          color 0 0 0 0
          position 0 0
          size 293 38
@@ -795,7 +801,7 @@ FrameWidgetClass main_menu_root {
          "next up" "choose_server"
          "next down" "play_video"
          {
-          PanelWidgetClass QueueBtn_panel {
+          PanelWidgetClass DonateBtn_panel {
            ignorepointer 1
            color 0 0 0 0
            size 1 1
@@ -807,7 +813,7 @@ FrameWidgetClass main_menu_root {
            vexactsize 0
            style DayZDefaultPanel
            {
-            TextWidgetClass QueueBtn_label {
+            TextWidgetClass DonateBtn_label {
              clipchildren 0
              ignorepointer 1
              size 1 1
@@ -817,7 +823,7 @@ FrameWidgetClass main_menu_root {
              vexactpos 0
              hexactsize 0
              vexactsize 0
-             text "Priority Queue"
+             text "DONATE"
              font "Colorful-UI/gui/fonts/GB-Regular.fnt"
              "text sharpness" 1.5
              "exact text" 1
@@ -979,6 +985,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 1
              vexactsize 1
              image0 "set:cui image:Discord"
+             imageTexture "{4E1A3BC523539FB3}Colorful-UI/GUI/imagesets/BSRP-Imageset.edds"
              mode blend
              "src alpha" 1
              "clamp mode" clamp
@@ -1050,6 +1057,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 1
              vexactsize 1
              image0 "set:cui image:Youtube"
+             imageTexture "{4E1A3BC523539FB3}Colorful-UI/GUI/imagesets/BSRP-Imageset.edds"
              mode blend
              "src alpha" 1
              "clamp mode" clamp
@@ -1119,6 +1127,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 1
              vexactsize 1
              image0 "set:cui image:Twitter"
+             imageTexture "{4E1A3BC523539FB3}Colorful-UI/GUI/imagesets/BSRP-Imageset.edds"
              mode blend
              "src alpha" 1
              "clamp mode" clamp
@@ -1149,7 +1158,7 @@ FrameWidgetClass main_menu_root {
           }
          }
         }
-        ButtonWidgetClass RedditBtn {
+        ButtonWidgetClass InstagramBtn {
          visible 1
          color 0 0 0 0
          size 293 38
@@ -1166,7 +1175,7 @@ FrameWidgetClass main_menu_root {
          "next up" "choose_server"
          "next down" "play_video"
          {
-          PanelWidgetClass RedditBtn_panel {
+          PanelWidgetClass InstagramBtn_panel {
            ignorepointer 1
            color 0 0 0 0
            size 293 40
@@ -1178,7 +1187,7 @@ FrameWidgetClass main_menu_root {
            vexactsize 1
            style DayZDefaultPanel
            {
-            ImageWidgetClass RedditBtn_img {
+            ImageWidgetClass InstagramBtn_img {
              clipchildren 0
              ignorepointer 1
              position 0 0
@@ -1189,14 +1198,15 @@ FrameWidgetClass main_menu_root {
              vexactpos 1
              hexactsize 1
              vexactsize 1
-             image0 "set:cui image:Reddit"
+             image0 "set:cui image:Instagram"
+             imageTexture "{4E1A3BC523539FB3}Colorful-UI/GUI/imagesets/BSRP-Imageset.edds"
              mode blend
              "src alpha" 1
              "clamp mode" clamp
              "stretch mode" stretch_w_h
              filter 1
             }
-            TextWidgetClass RedditBtn_label {
+            TextWidgetClass InstagramBtn_label {
              clipchildren 0
              ignorepointer 1
              position 50 0
@@ -1207,7 +1217,7 @@ FrameWidgetClass main_menu_root {
              vexactpos 1
              hexactsize 0
              vexactsize 0
-             text "Reddit"
+             text "Instagram"
              font "Colorful-UI/gui/fonts/GB-Regular.fnt"
              "exact text" 1
              "exact text size" 30
@@ -1221,7 +1231,7 @@ FrameWidgetClass main_menu_root {
          }
         }
         ButtonWidgetClass FacebookBtn {
-         visible 1
+         visible 0
          color 0 0 0 0
          size 293 38
          halign right_ref
@@ -1261,6 +1271,7 @@ FrameWidgetClass main_menu_root {
              hexactsize 1
              vexactsize 1
              image0 "set:cui image:Facebook"
+             imageTexture "{4E1A3BC523539FB3}Colorful-UI/GUI/imagesets/BSRP-Imageset.edds"
              mode blend
              "src alpha" 1
              "clamp mode" clamp
@@ -1364,8 +1375,9 @@ FrameWidgetClass main_menu_root {
      }
     }
     ImageWidgetClass SurvivorBox {
+     visible 1
      ignorepointer 1
-     color 1 1 1 0.6078
+     color 0.4314 0.4314 0.4314 0.6078
      position 0 140
      size 500 90
      valign center_ref
@@ -1460,6 +1472,7 @@ FrameWidgetClass main_menu_root {
            hexactsize 0
            vexactsize 0
            image0 "set:cui image:ChevronBoxLeft"
+           imageTexture "{4E1A3BC523539FB3}Colorful-UI/GUI/imagesets/BSRP-Imageset.edds"
            mode blend
            "src alpha" 1
           }
@@ -1495,6 +1508,7 @@ FrameWidgetClass main_menu_root {
            hexactsize 0
            vexactsize 0
            image0 "set:cui image:ChevronBoxRight"
+           imageTexture "{4E1A3BC523539FB3}Colorful-UI/GUI/imagesets/BSRP-Imageset.edds"
            mode blend
            "src alpha" 1
           }
@@ -1541,6 +1555,7 @@ FrameWidgetClass main_menu_root {
          hexactsize 0
          vexactsize 0
          image0 "set:cui image:EditUser"
+         imageTexture "{4E1A3BC523539FB3}Colorful-UI/GUI/imagesets/BSRP-Imageset.edds"
          mode blend
          "src alpha" 1
         }
@@ -1551,6 +1566,7 @@ FrameWidgetClass main_menu_root {
     FrameWidgetClass StatsBox {
      visible 1
      ignorepointer 1
+     color 0.4314 0.4314 0.4314 1
      position 0.00078 0.0014
      size 500 291
      valign bottom_ref
@@ -1563,7 +1579,7 @@ FrameWidgetClass main_menu_root {
        visible 1
        clipchildren 0
        ignorepointer 1
-       color 1 1 1 0.6078
+       color 0.4314 0.4314 0.4314 0.6078
        position 0 0
        size 1 1
        hexactpos 1
